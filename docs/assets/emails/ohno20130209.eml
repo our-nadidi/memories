@@ -1,0 +1,133 @@
+Delivered-To: orsobiancomio@gmail.com
+Received: by 10.223.171.131 with SMTP id h3csp119168faz;
+        Tue, 16 Apr 2013 12:16:31 -0700 (PDT)
+X-Received: by 10.15.36.135 with SMTP id i7mr9029046eev.34.1366137275769;
+        Tue, 16 Apr 2013 11:34:35 -0700 (PDT)
+DomainKey-Status: good (test mode)
+Received-SPF: neutral (google.com: 137.99.25.235 is neither permitted nor denied by domain of kdinep@comcast.net) client-ip=137.99.25.235;
+Received: by 10.222.77.142 with POP3 id g14mf216040eak.23;
+        Tue, 16 Apr 2013 11:34:35 -0700 (PDT)
+X-Gmail-Fetch-Info: marcus.li@uconn.edu 2 smtp.gmail.com 995 marcus.li@uconn.edu
+Delivered-To: marcus.li@gapps.uconn.edu
+Received: by 10.66.22.229 with SMTP id h5csp6288paf;
+        Fri, 8 Feb 2013 23:47:31 -0800 (PST)
+X-Received: by 10.52.88.175 with SMTP id bh15mr8855375vdb.34.1360396050583;
+        Fri, 08 Feb 2013 23:47:30 -0800 (PST)
+Return-Path: <kdinep@comcast.net>
+Received: from mta2.uits.uconn.edu (mailscanner.uconn.edu. [137.99.25.235])
+        by mx.google.com with ESMTP id z9si32562765vdj.31.2013.02.08.23.47.30;
+        Fri, 08 Feb 2013 23:47:30 -0800 (PST)
+Received-SPF: neutral (google.com: 137.99.25.235 is neither permitted nor denied by domain of kdinep@comcast.net) client-ip=137.99.25.235;
+Authentication-Results: mx.google.com;
+       spf=neutral (google.com: 137.99.25.235 is neither permitted nor denied by domain of kdinep@comcast.net) smtp.mail=kdinep@comcast.net;
+       dkim=pass (test mode) header.i=@comcast.net
+Received: from spam1.uits.uconn.edu (spamscanner.uconn.edu [137.99.25.228])
+	by mta2.uits.uconn.edu (Postfix) with ESMTP id F19282D13A
+	for <marcus.li@uconn.edu>; Sat,  9 Feb 2013 02:47:29 -0500 (EST)
+X-ASG-Debug-ID: 1360396049-050900682a4ef770001-GWR6Pa
+Received: from qmta03.westchester.pa.mail.comcast.net (qmta03.westchester.pa.mail.comcast.net [76.96.62.32]) by spam1.uits.uconn.edu with ESMTP id 03YdAyuAT4RuOd4x for <marcus.li@uconn.edu>; Sat, 09 Feb 2013 02:47:29 -0500 (EST)
+X-Barracuda-Envelope-From: kdinep@comcast.net
+X-Barracuda-Apparent-Source-IP: 76.96.62.32
+X-Barracuda-IPDD: Level1 [comcast.net/76.96.62.32]
+Received: from omta19.westchester.pa.mail.comcast.net ([76.96.62.98])
+	by qmta03.westchester.pa.mail.comcast.net with comcast
+	id y7j71k00327AodY537nVsi; Sat, 09 Feb 2013 07:47:29 +0000
+X-Barracuda-IPDD: Level1 [comcast.net/76.96.62.32]
+X-Barracuda-IPDD: Level1 [comcast.net/76.96.62.32]
+X-Barracuda-IPDD: Level1 [comcast.net/76.96.62.32]
+Received: from [192.168.0.4] ([24.2.239.151])
+	by omta19.westchester.pa.mail.comcast.net with comcast
+	id y7nU1k00c3Gh20w3f7nVz8; Sat, 09 Feb 2013 07:47:29 +0000
+From: Katherine Dinep <kdinep@comcast.net>
+Mime-Version: 1.0 (Apple Message framework v1085)
+Content-Type: multipart/alternative; boundary=Apple-Mail-49--163241353
+Subject: Re: Oh, NO :o(
+Date: Sat, 9 Feb 2013 02:47:27 -0500
+X-ASG-Orig-Subj: Re: Oh, NO :o(
+In-Reply-To: <CABzctTJ6rbAXHVzWsoHTxK=jKyM4FjXki3JuhJDWSf_K4+M4Jw@mail.gmail.com>
+To: Marcus Li <marcus.li@uconn.edu>
+References: <1E3260FB-E7AF-42B8-BFA2-E13585F2A92E@comcast.net> <CABzctTJ6rbAXHVzWsoHTxK=jKyM4FjXki3JuhJDWSf_K4+M4Jw@mail.gmail.com>
+Message-Id: <1D845D1A-3375-4CB6-BEEE-0D5FCD21ECF2@comcast.net>
+X-Mailer: Apple Mail (2.1085)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=comcast.net;
+	s=q20121106; t=1360396049;
+	bh=wVqmJMg0uQf7i5LbhKXMRpVQbODHjuZzalejs2gObpg=;
+	h=Received:Received:From:Mime-Version:Content-Type:Subject:Date:To:
+	 Message-Id;
+	b=e4yON1GcaoDswPEE7NAq9YwmKzi0kQRkjkQW+RSY3vl+adDksxInQEgp+N07Xg6aU
+	 8ap/cH7D6H1IBBC27sUk8FgiBhwECyX/nfMMicCLPFfejS/OfCFRno0YoJt+T8rkmy
+	 quF9KLAzcQWpe7X7He2n0SrzufgSJRLrF4snmaAjxro3u6lEI1Y1/lGXQqwXWvDEAo
+	 sckfAVuS44LNBEydvi43OKXLf0eXdxocmhTrIQepmDMn5tiJfELE0Feo/9YW5h5L2P
+	 sKA/Vhs2OoGO3yiCJ3WNsPQw/fshy5dDH6M7Zt8ANUsrUO8vHcz/2ggKYSWsH7uNMy
+	 FbIQku7EmpcEA==
+X-Barracuda-Connect: qmta03.westchester.pa.mail.comcast.net[76.96.62.32]
+X-Barracuda-Start-Time: 1360396049
+X-Barracuda-URL: http://137.99.25.228:8000/cgi-mod/mark.cgi
+X-Barracuda-BRTS-Status: 1
+X-Barracuda-Spam-Score: 0.00
+X-Barracuda-Spam-Status: No, SCORE=0.00 using per-user scores of TAG_LEVEL=3.5 QUARANTINE_LEVEL=1000.0 KILL_LEVEL=9.0 tests=HTML_MESSAGE
+X-Barracuda-Spam-Report: Code version 3.2, rules version 3.2.2.122220
+	Rule breakdown below
+	 pts rule name              description
+	---- ---------------------- --------------------------------------------------
+	0.00 HTML_MESSAGE           BODY: HTML included in message
+X-Virus-Scanned: clamav-milter 0.97.3 at mta2
+X-Virus-Status: Clean
+
+
+--Apple-Mail-49--163241353
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain;
+	charset=us-ascii
+
+Dear Marki,
+Thank you for prompt answer. I shall try. Am busy watching the wind, =
+snow in backyard and reports on TV.
+Weather is fascinating!
+It is finally bedtime.
+Enjoy the weekend.=20
+Tousels and Love,=20
+Nadidi
+On Feb 8, 2013, at 12:10 PM, Marcus Li wrote:
+
+> ask baba for the password...wait actually go on the notes app I think =
+your password is stored in one of the notes I made
+>=20
+>=20
+>=20
+> On Fri, Feb 8, 2013 at 12:01 AM, Katherine Dinep <kdinep@comcast.net> =
+wrote:
+> Dear Marki,
+> I downloaded something on iPad and now they want password I.D # etc =
+and drive me nuts...and I can't even open anything.
+> Just in case you want to text, you would need to e-mail until I can =
+fix things.
+> (Maybe a Photo of Buebi in the new suit.)
+>=20
+> They say not to use car after 10 AM Friday and please please be =
+safe!!!
+>=20
+> Love,
+> Nadidi
+> =20
+>=20
+
+
+--Apple-Mail-49--163241353
+Content-Transfer-Encoding: 7bit
+Content-Type: text/html;
+	charset=us-ascii
+
+<html><head></head><body style="word-wrap: break-word; -webkit-nbsp-mode: space; -webkit-line-break: after-white-space; ">Dear Marki,<div>Thank you for prompt answer. I shall try. Am busy watching the wind, snow in backyard and reports on TV.</div><div>Weather is fascinating!</div><div>It is finally bedtime.</div><div>Enjoy the weekend.&nbsp;</div><div>Tousels and Love,&nbsp;</div><div>Nadidi<br><div><div>On Feb 8, 2013, at 12:10 PM, Marcus Li wrote:</div><br class="Apple-interchange-newline"><blockquote type="cite"><div dir="ltr">ask baba for the password...wait actually go on the notes app I think your password is stored in one of the notes I made<div><br></div></div><div class="gmail_extra"><br><br><div class="gmail_quote">On Fri, Feb 8, 2013 at 12:01 AM, Katherine Dinep <span dir="ltr">&lt;<a href="mailto:kdinep@comcast.net" target="_blank">kdinep@comcast.net</a>&gt;</span> wrote:<br>
+<blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">Dear Marki,<br>
+I downloaded something on iPad and now they want password I.D # etc and drive me nuts...and I can't even open anything.<br>
+Just in case you want to text, you would need to e-mail until I can fix things.<br>
+(Maybe a Photo of Buebi in the new suit.)<br>
+<br>
+They say not to use car after 10 AM Friday and please please be safe!!!<br>
+<br>
+Love,<br>
+Nadidi<br>
+&nbsp;</blockquote></div><br></div>
+</blockquote></div><br></div></body></html>
+--Apple-Mail-49--163241353--
