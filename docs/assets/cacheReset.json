@@ -1,8 +1,6 @@
 {
   "global":1675901757000,
-  "photos": 1675977321000,
+  "https://parseapi.back4app.com/classes/Photos": 1676073841000,
   "emails": 1675895329000,
-  "4":"below is content json",
-  "https://parseapi.back4app.com/classes/Content?where=%7B%20%22active%22%3A%20true%20%7D": 1675895329000,
   "info": "cache busting mechanism forced by the server based on the epoch time (with ms) https://www.epochconverter.com/ to find current time"
 }
