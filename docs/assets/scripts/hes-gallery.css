@@ -27,6 +27,7 @@
   overflow: hidden;
   position: fixed;
   overflow-y: scroll !important;
+  width:100%
 }
 
 #hg-bg {

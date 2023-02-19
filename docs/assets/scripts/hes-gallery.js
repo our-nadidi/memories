@@ -7,8 +7,11 @@
 	Product under MIT licence
 
 */
+//marcus added
+GALLERY_SCROLL_Y = 0;
 
 const HesGallery = {
+
   version: '1.5.1',
   options: {
     // Global
@@ -187,6 +190,13 @@ const HesGallery = {
     }
   //marcus added to prevent infinitely adding classes
     if (this.options.disableScrolling && !document.body.className.match("hg-disable-scrolling")) {
+      //Marcus added
+      const scrollY = window.pageYOffset;
+      // const maxHeight = document.body.scrollHeight - window.innerHeight;
+      // console.log((window.pageYOffset * 100) / maxHeight);
+      // console.log("recorded y " + scrollY)
+      GALLERY_SCROLL_Y = scrollY;
+      //Marcus added end
       document.body.classList += ' hg-disable-scrolling hg-disable-scrolling2'
     } // Disable scroll
   },
@@ -199,6 +209,11 @@ const HesGallery = {
     if (this.options.disableScrolling) {
       document.body.classList.remove('hg-disable-scrolling')
       document.body.classList.remove('hg-disable-scrolling2')
+      const body = document.body;
+      const scrollY = body.style.top;
+      body.style.position = '';
+      body.style.top = '';
+      setTimeout(()=>{window.scrollTo(0, GALLERY_SCROLL_Y);    console.log("scrolling to " + GALLERY_SCROLL_Y);},10);
 
     } // Enable scroll
   },
