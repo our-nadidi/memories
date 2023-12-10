@@ -14,28 +14,33 @@
 
 
 <script>
-  /*!
-// Snow.js - v0.0.3
-// kurisubrooks.com
-*/
+var snowMax; 
+ // Minimum Flake Size
+ var snowMinSize = 2;
 
-  // Amount of Snowflakes
-  var snowMax = 35;
+// Maximum Flake Size
+var snowMaxSize = 8;
+if (/Mobi/.test(navigator.userAgent)) {
+    // Set a lower number of snowflakes for mobile
+    console.log("mobile")
+    snowMax = 15;
+  
+  } else {
+    // Set the regular number of snowflakes for other devices
+    snowMax = 35;
+    console.log("d")
+    snowMinSize = 6;
+    snowMaxSize = 18;
+  }
 
   // Snowflake Colours
   var snowColor = ["#DDD", "#EEE"];
 
-  // Snow Entity
-  var snowEntity = "&#x2744;";
+ var snowCodes = ["&#10054;","&#10053;","&#10055;"]
 
   // Falling Velocity
   var snowSpeed = 0.45;
 
-  // Minimum Flake Size
-  var snowMinSize = 2;
-
-  // Maximum Flake Size
-  var snowMaxSize = 8;
 
   // Refresh Rate (in milliseconds)
   var snowRefresh = 70;
@@ -121,6 +126,7 @@ function resize() {
   }
 
   for (i = 0; i <= snowMax; i++) {
+    var randomSnowCode = snowCodes[Math.floor(Math.random() * snowCodes.length)]
     document.write(
       "<span id='flake" +
         i +
@@ -128,13 +134,20 @@ function resize() {
         snowStyles +
         "position:absolute;top:-" +
         snowMaxSize +
-        "; filter: blur(2px); box-shadow: 0 0 2px rgba(255, 255, 255, 0.8);'>" +
-        snowEntity +
+        "'>" +
+        randomSnowCode +
         "</span>"
     );
   }
 
-  window.addEventListener("resize", resize);
+  var resizeTimeout;
+  function debounceResize() {
+    if(resizeTimeout) clearTimeout(resizeTimeout);
+  resizeTimeout = setTimeout(resize, 400); 
+}
+
+window.addEventListener("resize", debounceResize);
+
   window.addEventListener("load", initSnow);
 </script>
 </body></html><!-- WINTER SNOW -->
