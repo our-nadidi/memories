@@ -12,6 +12,7 @@
   <script src="runtime.1da3c9d02273d72d.js" type="module"></script><script src="polyfills.36d969845479e6a6.js" type="module"></script><script src="scripts.f3e02dc462b126a1.js" defer></script><script src="main.521ea99b7fe87a88.js" type="module"></script>
 
 
+
 <script>
   /*!
 // Snow.js - v0.0.3
@@ -25,7 +26,7 @@
   var snowColor = ["#DDD", "#EEE"];
 
   // Snow Entity
-  var snowEntity = "&#9728;";
+  var snowEntity = "&#x2744;";
 
   // Falling Velocity
   var snowSpeed = 0.45;
@@ -37,7 +38,7 @@
   var snowMaxSize = 10;
 
   // Refresh Rate (in milliseconds)
-  var snowRefresh = 64;
+  var snowRefresh = 70;
 
   // Additional Styles
   var snowStyles =
@@ -64,8 +65,8 @@
 
   function initSnow() {
     var snowSize = snowMaxSize - snowMinSize;
-    marginBottom = document.documentElement.scrollHeight - 15;
-    marginRight = document.documentElement.clientWidth - 15;
+    marginBottom = window.innerHeight - 15;
+    marginRight = window.innerWidth - 15;
 
     for (i = 0; i <= snowMax; i++) {
       coords[i] = 0;
@@ -93,8 +94,8 @@
 
 function resize() {
 
-        marginBottom = document.documentElement.scrollHeight - 15;
-        marginRight = document.documentElement.clientWidth - 15;
+        marginBottom = window.innerHeight - 15;
+        marginRight = window.innerWidth - 15;
         for (i = 0; i <= snowMax/2; i++) {
     
       snow[i].posY =marginBottom + 10;
@@ -110,7 +111,7 @@ function resize() {
       snow[i].style.top = snow[i].posY + "px";
 
       if (
-        snow[i].posY >= marginBottom - 20 * snow[i].size ||
+        snow[i].posY - Math.floor(40 * Math.random()) >= marginBottom - 20 * snow[i].size ||
         parseInt(snow[i].style.left) > marginRight - 3 * lefr[i]
       ) {
         snow[i].posX = randomise(marginRight - snow[i].size);
@@ -136,4 +137,4 @@ function resize() {
   window.addEventListener("resize", resize);
   window.addEventListener("load", initSnow);
 </script>
-</body></html>
+</body></html><!-- WINTER SNOW -->
