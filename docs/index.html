@@ -20,23 +20,21 @@ var snowMax;
 
 // Maximum Flake Size
 var snowMaxSize = 8;
+var snowCodes = ["&#10054;","&#10053;"]
 if (/Mobi/.test(navigator.userAgent)) {
     // Set a lower number of snowflakes for mobile
-    console.log("mobile")
     snowMax = 15;
   
   } else {
     // Set the regular number of snowflakes for other devices
     snowMax = 35;
-    console.log("d")
     snowMinSize = 6;
     snowMaxSize = 18;
+    snowCodes.push("&#10055;");
   }
 
   // Snowflake Colours
   var snowColor = ["#DDD", "#EEE"];
-
- var snowCodes = ["&#10054;","&#10053;","&#10055;"]
 
   // Falling Velocity
   var snowSpeed = 0.45;
