@@ -1,17 +1,139 @@
 <!DOCTYPE html><html class="background" lang="en"><head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no,maximum-scale=1">
-  <title>Nadidi</title>
-  <base href="https://our-nadidi.github.io/memories/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-<style>.background{content:"";background:url(starry_night_full.ac070689722c40b6.jpg) no-repeat center center fixed;background-position:center;background-repeat:no-repeat;background-size:cover;background-attachment:fixed;background-position:top left}html{display:flex;flex-direction:column;align-content:stretch;align-items:stretch;flex-wrap:nowrap;overflow:scroll;justify-content:flex-start;height:100vh}body{display:flex;justify-content:space-evenly;margin:0;flex-direction:column;justify-content:flex-start}app-root{flex-wrap:nowrap;flex-direction:column}</style><link rel="stylesheet" href="styles.31feb9796207b3e2.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles.31feb9796207b3e2.css"></noscript></head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no,maximum-scale=1">
+    <title>Nadidi</title>
+    <base href="https://our-nadidi.github.io/memories/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <style>.background{content:"";background:url(starry_night_full.ac070689722c40b6.jpg) no-repeat center center fixed;background-position:center;background-repeat:no-repeat;background-size:cover;background-attachment:fixed;background-position:top left}html{display:flex;flex-direction:column;align-content:stretch;align-items:stretch;flex-wrap:nowrap;overflow:scroll;justify-content:flex-start}body{display:flex;justify-content:space-evenly;margin:0;flex-direction:column;justify-content:flex-start;max-height:100%}app-root{flex-wrap:nowrap;flex-direction:column}</style><link rel="stylesheet" href="styles.6910fcbef9c13ff1.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles.6910fcbef9c13ff1.css"></noscript></head>
+
   <body>
-  <app-root>
-  </app-root>
-<!--  background starry night in styles.scss-->
+    <app-root> </app-root>
   <script src="runtime.1da3c9d02273d72d.js" type="module"></script><script src="polyfills.36d969845479e6a6.js" type="module"></script><script src="scripts.f3e02dc462b126a1.js" defer></script><script src="main.521ea99b7fe87a88.js" type="module"></script>
 
 
+<script>
+  /*!
+// Snow.js - v0.0.3
+// kurisubrooks.com
+*/
 
+  // Amount of Snowflakes
+  var snowMax = 35;
+
+  // Snowflake Colours
+  var snowColor = ["#DDD", "#EEE"];
+
+  // Snow Entity
+  var snowEntity = "&#9728;";
+
+  // Falling Velocity
+  var snowSpeed = 0.45;
+
+  // Minimum Flake Size
+  var snowMinSize = 4;
+
+  // Maximum Flake Size
+  var snowMaxSize = 10;
+
+  // Refresh Rate (in milliseconds)
+  var snowRefresh = 64;
+
+  // Additional Styles
+  var snowStyles =
+    "cursor: default; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; -o-user-select: none; user-select: none;";
+
+  /*
+// End of Configuration
+// ----------------------------------------
+// Do not modify the code below this line
+*/
+
+  var snow = [],
+    pos = [],
+    coords = [],
+    lefr = [],
+    marginBottom,
+    marginRight;
+  var intervalId;
+  var clearing = false;
+  function randomise(range) {
+    rand = Math.floor(range * Math.random());
+    return rand;
+  }
+
+  function initSnow() {
+    var snowSize = snowMaxSize - snowMinSize;
+    marginBottom = document.documentElement.scrollHeight - 15;
+    marginRight = document.documentElement.clientWidth - 15;
+
+    for (i = 0; i <= snowMax; i++) {
+      coords[i] = 0;
+      lefr[i] = Math.random() * 15;
+      pos[i] = 0.03 + Math.random() / 10;
+      if(document.getElementById("flake" + i)){
+      snow[i] = document.getElementById("flake" + i);
+      snow[i].style.fontFamily = "inherit";
+      snow[i].size = randomise(snowSize) + snowMinSize;
+      snow[i].style.fontSize = snow[i].size + "px";
+      snow[i].style.color = snowColor[randomise(snowColor.length)];
+      snow[i].style.zIndex = 1000;
+      snow[i].sink = (snowSpeed * snow[i].size) / 5;
+      snow[i].posX = randomise(marginRight - snow[i].size);
+      snow[i].posY = randomise(
+        2 * marginBottom - marginBottom - 2 * snow[i].size
+      );
+      snow[i].style.left = snow[i].posX + "px";
+      snow[i].style.top = snow[i].posY + "px";
+      }
+    }
+
+   intervalId= setInterval("moveSnow()", snowRefresh);
+  }
+
+function resize() {
+
+        marginBottom = document.documentElement.scrollHeight - 15;
+        marginRight = document.documentElement.clientWidth - 15;
+        for (i = 0; i <= snowMax/2; i++) {
+    
+      snow[i].posY =marginBottom + 10;
+    }
+  }
+
+
+  function moveSnow() {
+    for (i = 0; i <= snowMax; i++) {
+      coords[i] += pos[i];
+      snow[i].posY += snow[i].sink;
+      snow[i].style.left = snow[i].posX + lefr[i] * Math.sin(coords[i]) + "px";
+      snow[i].style.top = snow[i].posY + "px";
+
+      if (
+        snow[i].posY >= marginBottom - 20 * snow[i].size ||
+        parseInt(snow[i].style.left) > marginRight - 3 * lefr[i]
+      ) {
+        snow[i].posX = randomise(marginRight - snow[i].size);
+        snow[i].posY = 0;
+      }
+    }
+  }
+
+  for (i = 0; i <= snowMax; i++) {
+    document.write(
+      "<span id='flake" +
+        i +
+        "' style='" +
+        snowStyles +
+        "position:absolute;top:-" +
+        snowMaxSize +
+        "'>" +
+        snowEntity +
+        "</span>"
+    );
+  }
+
+  window.addEventListener("resize", resize);
+  window.addEventListener("load", initSnow);
+</script>
 </body></html>
